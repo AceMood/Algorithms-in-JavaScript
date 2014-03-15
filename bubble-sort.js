@@ -30,6 +30,10 @@
 
 /**
  * Order an array.
+ * 最差时间复杂度	O(pow(n, 2))
+ * 最优时间复杂度	O(n)
+ * 平均时间复杂度	O(pow(n, 2))
+最差空间复杂度	总共O(n)，需要辅助空间O(1)
  * @param {Array} arr An array to be sorted.
  * @param {boolean} orderUp If ordering up or not.
  * @return {Array} the result array.
