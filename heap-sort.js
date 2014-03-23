@@ -35,13 +35,13 @@
  */
 function MAX_HEAPIFY (array, i) {
   var leftNode = 2 * i + 1,
-	  rightNode = 2 * i + 2;
+      rightNode = 2 * i + 2;
   var largest, temp;
 
   if (leftNode < array.length && array[leftNode] > array[i]) {
-	largest = leftNode
+    largest = leftNode
   } else {
-	largest = i
+    largest = i
   }
 
   if (rightNode < array.length && array[rightNode] > array[largest]) {
@@ -50,8 +50,8 @@ function MAX_HEAPIFY (array, i) {
 
   if (largest !== i) {
     temp = array[i];
-	array[i] = array[largest];
-	array[largest] = temp;
+    array[i] = array[largest];
+    array[largest] = temp;
 
     MAX_HEAPIFY(array, largest)
   }
@@ -94,11 +94,11 @@ function heapSort (arr) {
   var temp;
   for (i = arr.length - 1 ; i >= 0; i--) {
     temp = arr[i];
-	arr[i] = arr[0];
-	arr[0] = temp;
+    arr[i] = arr[0];
+    arr[0] = temp;
 
-	ret.push(arr.pop());
-	MAX_HEAPIFY(arr, 0);
+    ret.push(arr.pop());
+    MAX_HEAPIFY(arr, 0);
   }
   return ret
 }
