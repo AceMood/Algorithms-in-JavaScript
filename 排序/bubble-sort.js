@@ -30,14 +30,14 @@
 
 /**
  * Order an array.
- * ×î²îÊ±¼ä¸´ÔÓ¶È	O(pow(n, 2))
- * ×îÓÅÊ±¼ä¸´ÔÓ¶È	O(n)
- * Æ½¾ùÊ±¼ä¸´ÔÓ¶È	O(pow(n, 2))
-×î²î¿Õ¼ä¸´ÔÓ¶È	×Ü¹²O(n)£¬ĞèÒª¸¨Öú¿Õ¼äO(1)
+ * æœ€å·®æ—¶é—´å¤æ‚åº¦	O(pow(n, 2))
+ * æœ€ä¼˜æ—¶é—´å¤æ‚åº¦	O(n)
+ * å¹³å‡æ—¶é—´å¤æ‚åº¦	O(pow(n, 2))
+ * æœ€å·®ç©ºé—´å¤æ‚åº¦	æ€»å…±O(n)ï¼Œéœ€è¦è¾…åŠ©ç©ºé—´O(1)
  * @param {Array} arr An array to be sorted.
  * @param {boolean} orderUp If ordering up or not.
  * @return {Array} the result array.
- */ 
+ */
 function bubbleSort (arr, orderUp) {
   var i, j;
   var temp;
@@ -59,7 +59,7 @@ function bubbleSort (arr, orderUp) {
 }
 
 // Usage: 
-var arr = [3, 2, 4, 9, 1, 5, 7, 6, 8];
-var arrSorted = bubbleSort(arr);
+// var arr = [3, 2, 4, 9, 1, 5, 7, 6, 8];
+// var arrSorted = bubbleSort(arr);
 
-console.log(arrSorted);
+// console.log(arrSorted);

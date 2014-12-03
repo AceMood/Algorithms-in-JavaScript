@@ -29,7 +29,7 @@
 
 
 /**
- * ¶ÔÒ»¸öÊı×é±£³Ö¶ÑµÄĞÔÖÊ
+ * å¯¹ä¸€ä¸ªæ•°ç»„ä¿æŒå †çš„æ€§è´¨
  * @param {!Array} array
  * @param {number} i
  */
@@ -59,7 +59,7 @@ function MAX_HEAPIFY (array, i) {
 
 
 /**
- * ÒÔÒ»¸öÊı×éÀ´½¨Á¢×î´ó¶Ñ
+ * ä»¥ä¸€ä¸ªæ•°ç»„æ¥å»ºç«‹æœ€å¤§å †
  * @param {!Array} array
  */
 function BUILD_MAX_HEAP (array) {
@@ -72,20 +72,20 @@ function BUILD_MAX_HEAP (array) {
 
 /**
  * HEAPSORT(A)
- * 1. BUILD_MAX_HEAP(A) 
+ * 1. BUILD_MAX_HEAP(A)
  * 2. for i <- length(A) downto 2
  * 3.   do exchange A[1] <-> A[I]
  * 4.     heap-size[A] <- heap-size[A] - 1
  * 5.     MAX_HEAPIFY(A, 1)
  *
- * ×î²îÊ±¼ä¸´ÔÓ¶È	O(nlogn)
- * ×îÓÅÊ±¼ä¸´ÔÓ¶È	O(nlogn)
- * Æ½¾ùÊ±¼ä¸´ÔÓ¶È	O(nlogn)
- * ×î²î¿Õ¼ä¸´ÔÓ¶È	×Ü¹²O(n)
- * 
+ * æœ€å·®æ—¶é—´å¤æ‚åº¦	O(nlogn)
+ * æœ€ä¼˜æ—¶é—´å¤æ‚åº¦	O(nlogn)
+ * å¹³å‡æ—¶é—´å¤æ‚åº¦	O(nlogn)
+ * æœ€å·®ç©ºé—´å¤æ‚åº¦	æ€»å…±O(n)
+ *
  * @param {Array} arr An array to be sorted.
  * @return {Array} the result array.
- */ 
+ */
 function heapSort (arr) {
   var ret = [];
   BUILD_MAX_HEAP(arr);
@@ -104,7 +104,7 @@ function heapSort (arr) {
 }
 
 // Usage: 
-var arr = [3, 2, 4, 9, 1, 5, 7, 6, 8];
-var arrSorted = heapSort(arr);
+// var arr = [3, 2, 4, 9, 1, 5, 7, 6, 8];
+// var arrSorted = heapSort(arr);
 
-console.log(arrSorted);
+// console.log(arrSorted);
