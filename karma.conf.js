@@ -1,12 +1,8 @@
 // Karma configuration
 // Generated on Wed Dec 03 2014 21:59:03 GMT+0800 (中国标准时间)
 
-module.exports = function(config) {
 
-    var grid = {
-        hostname: '127.0.0.1',
-        port: 4444
-    };
+module.exports = function(config) {
 
     config.set({
 
@@ -21,7 +17,9 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            '**/CommonLongestString.js', '**/CommonLongestString-spec.js'
+            '**/CommonLongestString.js',
+            '**/CommonLongestString-spec.js',
+            'test-main.js'
         ],
 
 
@@ -46,10 +44,6 @@ module.exports = function(config) {
         port: 9876,
 
 
-        // cli runner port
-        // runnerPort: 9100,
-
-
         // enable / disable colors in the output (reporters and logs)
         colors: true,
 
@@ -60,7 +54,7 @@ module.exports = function(config) {
 
 
         // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: false,
+        autoWatch: true,
 
 
         // number ms delay to wait for other changes
@@ -69,18 +63,6 @@ module.exports = function(config) {
 
         // time for connecting
         browserDisconnectTolerance: 5000,
-
-
-        //
-        customLaunchers: {
-            'IE9-Win7': {
-                base: 'WebDriver',
-                config: grid,
-                browserName: 'internet explorer',
-                platform: 'Windows 7',
-                version: '9'
-            }
-        },
 
 
         // start these browsers
@@ -94,7 +76,11 @@ module.exports = function(config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['IE'],
+        browsers: ['Chrome'],
+
+
+        // If browser does not capture in given timeout [ms], kill it
+        captureTimeout: 60000,
 
 
         // Continuous Integration mode
