@@ -27,39 +27,46 @@
  * SOFTWARE.
  */
 
+;(function(global) {
 
-/**
- * Order an array.
- * 最差时间复杂度	O(pow(n, 2))
- * 最优时间复杂度	O(n)
- * 平均时间复杂度	O(pow(n, 2))
- * 最差空间复杂度	总共O(n)，需要辅助空间O(1)
- * @param {Array} arr An array to be sorted.
- * @param {boolean} orderUp If ordering up or not.
- * @return {Array} the result array.
- */
-function bubbleSort (arr, orderUp) {
-  var i, j;
-  var temp;
-  var cmpFn = orderUp ? function (a, b) {
-    return a > b
-  } : function (a, b) {
-    return b > a
-  };
-  for (i = arr.length - 1 ; i >= 0; i--) {
-    for (j = 0; j < i; j++) {
-      if (cmpFn(arr[j], arr[j + 1])) {
-        temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
+    'use strict';
+
+    /**
+     * Order an array.
+     * 最差时间复杂度	O(pow(n, 2))
+     * 最优时间复杂度	O(n)
+     * 平均时间复杂度	O(pow(n, 2))
+     * 最差空间复杂度	总共O(n)，需要辅助空间O(1)
+     * @param {Array} arr An array to be sorted.
+     * @param {boolean} orderUp If ordering up or not.
+     * @return {Array} the result array.
+     */
+    function bubbleSort (arr, orderUp) {
+        var i, j;
+        var temp;
+        var cmpFn = orderUp ? function (a, b) {
+            return a > b
+        } : function (a, b) {
+            return b > a
+        };
+        for (i = arr.length - 1 ; i >= 0; i--) {
+            for (j = 0; j < i; j++) {
+                if (cmpFn(arr[j], arr[j + 1])) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        return arr
     }
-  }
-  return arr
-}
 
-// Usage: 
+    global.bubbleSort = bubbleSort;
+
+// Usage:
 // var arr = [3, 2, 4, 9, 1, 5, 7, 6, 8];
 // var arrSorted = bubbleSort(arr);
 
 // console.log(arrSorted);
+
+})(this);

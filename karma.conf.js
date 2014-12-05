@@ -17,8 +17,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            '**/CommonLongestString.js',
-            '**/CommonLongestString-spec.js',
+            '!(node_modules)/*.js',
             'test-main.js'
         ],
 
@@ -76,7 +75,7 @@ module.exports = function(config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['Chrome'],
+        browsers: ['Chrome', 'Firefox'],
 
 
         // If browser does not capture in given timeout [ms], kill it
