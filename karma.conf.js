@@ -17,8 +17,47 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            '!(node_modules)/*.js',
-            'test-main.js'
+            // html file as fixture
+            {
+                pattern: 'test-all.html',
+                watched: false,
+                included: false,
+                served: true
+            },
+            // dependencies
+            /*
+            {
+                pattern: 'lib/jasmine-2.0.3/jasmine.js',
+                watched: false,
+                included: true,
+                served: true
+                },
+            {
+                pattern: 'lib/jasmine-2.0.3/jasmine-html.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+            {
+                pattern: 'lib/jasmine-2.0.3/boot.js',
+                watched: false,
+                included: true,
+                served: true
+            },*/
+            // test files
+            {
+                pattern: '!(node_modules)/*.js',
+                watched: false,
+                included: true,
+                served: true
+            },
+            // entry point file
+            {
+                pattern: 'test-main.js',
+                watched: false,
+                included: true,
+                served: true
+            }
         ],
 
 
@@ -29,8 +68,8 @@ module.exports = function(config) {
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {
-        },
+        // we need this to keep Karma from converting our fixtures to JavaScript
+        preprocessors: {},
 
 
         // test results reporter to use
@@ -75,7 +114,7 @@ module.exports = function(config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['Chrome', 'Firefox'],
+        browsers: ['Firefox'],
 
 
         // If browser does not capture in given timeout [ms], kill it
