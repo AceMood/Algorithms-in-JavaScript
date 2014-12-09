@@ -18,12 +18,12 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             // html file as fixture
-            {
+            /*{
                 pattern: 'test-all.html',
                 watched: false,
                 included: false,
                 served: true
-            },
+            },*/
             // dependencies
             /*
             {
@@ -53,7 +53,7 @@ module.exports = function(config) {
             },
             // entry point file
             {
-                pattern: 'test-main.js',
+                pattern: 'test/jasmine-global.js',
                 watched: false,
                 included: true,
                 served: true
